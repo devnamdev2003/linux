@@ -3,6 +3,7 @@
 ## Topic:
 
 - [Topic:](#topic)
+- [Directory structure](#directory-structure)
 - [Commands](#commands)
 - [User\_Management\_commands](#user_management_commands)
   - [Add user](#add-user)
@@ -18,6 +19,87 @@
   - [Example - Running Ubuntu:](#example---running-ubuntu)
 - [Install\_Python\_on\_Linux:](#install_python_on_linux)
   - [Additional Tips:](#additional-tips)
+
+## Directory structure
+
+Directory structure adheres to the Filesystem Hierarchy Standard (FHS), a convention followed by most Unix-like operating systems. Each directory serves a specific purpose, and understanding their roles is crucial for effectively navigating and managing the system.
+
+1. **/bin:**
+   - The `/bin` directory contains essential binary executables (commands) that are required for the system's basic functionality. These binaries are crucial for system recovery and repair, and they are accessible to all users.
+   - This is like a toolbox where essential tools or programs are kept. These tools help the computer do basic tasks.
+
+
+2. **/boot:**
+   - The `/boot` directory holds files related to the system's boot process. This includes the kernel, initial RAM disk (initramfs), and bootloader configuration files.
+   - It's like the entryway to your computer. It holds important things needed to start the computer, like a special program called the kernel.
+
+3. **/dev:**
+   - The `/dev` directory is a virtual filesystem containing device files. These files represent and allow access to various hardware devices and peripheral devices in the system.
+   - This is like a shelf where the computer keeps pretend versions of all its devices, like keyboards, mice, and printers.
+
+4. **/etc:**
+   - The `/etc` directory stores system-wide configuration files and scripts. Configuration files for software applications, startup scripts, and system-wide settings are typically found here.
+   - This is like the settings folder. It has files that tell the computer how to behave and how different programs should work together.
+
+5. **/home:**
+   - The `/home` directory contains personal user home directories. Each user typically has a subdirectory here to store their personal files and configurations.
+   - It's like your room. Each person who uses the computer has their own space here to keep their things.
+
+6. **/lib, /lib32, /lib64, /libx32:**
+   - These directories contain shared libraries required for programs and applications. `/lib` holds 32-bit libraries, `/lib32` and `/libx32` are for 32-bit and 64-bit libraries on some systems, and `/lib64` contains 64-bit libraries.
+   - These are like a library with books that programs use. They contain pieces of code that programs can share.
+
+7. **/media:**
+   - The `/media` directory is used as a mount point for removable media such as USB drives or external hard disks. When a removable device is mounted, a subdirectory is created here.
+   - It's like a plug-in area. When you connect something like a USB drive, it appears here.
+
+8. **/mnt:**
+   - Similar to `/media`, the `/mnt` directory is a conventional mount point for temporary filesystems or additional storage devices. Users can manually mount filesystems here as needed.
+   - This is like a parking lot for extra things you might want to connect to your computer. It's a temporary space.
+
+9. **/opt:**
+   - The `/opt` directory is designed for optional software packages. Third-party software can be installed in subdirectories within `/opt` without interfering with the system's package manager.
+   - It's like a place for special software that you add later. Normal programs usually go in other places.
+
+10. **/proc:**
+    - The `/proc` directory is a virtual filesystem that provides information about system processes and kernel parameters. It allows access to runtime system information as files.
+    - This is like a list of what the computer is currently doing. It's like peeking into its to-do list.
+
+11. **/root:**
+    - The `/root` directory is the home directory for the root user, the superuser with administrative privileges.
+    - It's like a place where the computer keeps things that are happening right now. It's temporary and changes when you restart the computer.
+
+12. **/run:**
+    - The `/run` directory contains system runtime data that is volatile and is recreated at boot. It includes information about running processes and system state.
+
+13. **/sbin:**
+    - Similar to `/bin`, the `/sbin` directory contains essential system binaries. However, binaries in `/sbin` are typically meant for system administrators and require elevated privileges to execute.
+    - It's like a special toolbox with tools for the boss. Normal users usually don't use these tools.
+
+14. **/srv:**
+    - The `/srv` directory is designed to contain data for services provided by the system. It serves as a location for data files related to services rather than configuration files.
+    - It's like a folder for things that provide services, like a website or a file-sharing service.
+
+15. **/sys:**
+    - The `/sys` directory is a virtual filesystem that exposes information and configuration options related to the kernel and devices. It provides a way to interact with the kernel and kernel parameters.
+    - It's like a secret door to talk to the computer's brain, called the kernel. Normal users don't usually need to go in here.
+
+16. **/tmp:**
+    - The `/tmp` directory is used for storing temporary files that are meant to be accessible by all users. Files in this directory are typically deleted upon system reboot.
+    - It's like a whiteboard where the computer can quickly jot down notes. Anything here usually gets erased when you restart.
+
+17. **/usr:**
+    - The `/usr` directory contains user-related binaries, libraries, documentation, and source code. It is one of the largest directories and is meant for read-only data.
+    - It's like another big room with more tools and programs. This is where most of the stuff on the computer lives.
+
+18. **/var:**
+    - The `/var` directory holds variable data that may change during the system's runtime. This includes log files, spool directories, and other dynamic data.
+    - It's like a place for things that change a lot, like log files that keep track of what the computer has been doing.
+
+
+By examining and understanding the purpose of each directory in the root filesystem, users gain valuable insights into the organization and functionality of a Linux system. This directory structure forms the backbone of the system, facilitating efficient management, maintenance, and navigation. Whether you're a system administrator or a user, having a grasp of these directories enhances your ability to interact with and comprehend the underlying architecture of a Linux system.
+
+---
 
 ## Commands
 
