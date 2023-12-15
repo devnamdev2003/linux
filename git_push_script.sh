@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Change to the directory containing your Git repository
-cd /path/to/your/git/repository
-
 # Add all changes to the staging area
 git add .
 
