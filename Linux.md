@@ -93,6 +93,25 @@ Directory structure adheres to the Filesystem Hierarchy Standard (FHS), a conven
 
 By examining and understanding the purpose of each directory in the root filesystem, users gain valuable insights into the organization and functionality of a Linux system. This directory structure forms the backbone of the system, facilitating efficient management, maintenance, and navigation. Whether you're a system administrator or a user, having a grasp of these directories enhances your ability to interact with and comprehend the underlying architecture of a Linux system.
 
+
+In a command-line interface (CLI) or terminal, directories (folders) and files are often represented in different colors to visually distinguish between them. This color-coded representation is a helpful feature that aids users in quickly identifying the type of a listed item. Here's a typical color scheme:
+
+1. **Directories (Folders):**
+   - **Color: Blue or Cyan**
+   - **Meaning: Directories, or folders, are often displayed in a shade of blue or cyan.**
+   - **Purpose: This color helps users easily identify which entries in the listing are directories.**
+
+2. **Files:**
+   - **Color: White or Default Text Color**
+   - **Meaning: Regular files, such as text files, documents, or executables, are usually displayed in the default text color, which is often white or another neutral color.**
+   - **Purpose: This allows users to recognize non-directory items as files, making it clear what type of content they are dealing with.**
+
+The use of colors enhances the readability of the terminal output, especially when working with long lists of files and directories. This visual distinction is particularly valuable for users who navigate and manage their file system primarily through the command line.
+
+Keep in mind that the actual colors may vary depending on the terminal emulator and the color scheme configured for the terminal. Some users customize their terminal color schemes, and different terminal applications might have different default colors for directories and files.
+
+Additionally, some terminals or systems may not use colors by default. In such cases, users can often enable or customize color output through terminal settings or by using command-line options for the specific commands they are running (e.g., `ls` command options for listing files in Linux).
+
 ---
 
 ## Commands
