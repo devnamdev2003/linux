@@ -12,8 +12,9 @@
   - [Exit](#exit)
   - [Delete\_user](#delete_user)
 - [Running\_Linux\_on\_Docker](#running_linux_on_docker)
-  - [Prerequisites:](#prerequisites)
   - [Steps to Run Linux on Docker:](#steps-to-run-linux-on-docker)
+  - [Start a stopped Docker container,](#start-a-stopped-docker-container)
+  - [Enter the shell of a running Docker container](#enter-the-shell-of-a-running-docker-container)
   - [Example - Running Ubuntu:](#example---running-ubuntu)
 - [Install\_Python\_on\_Linux:](#install_python_on_linux)
   - [Additional Tips:](#additional-tips)
@@ -258,10 +259,6 @@ Please exercise caution when deleting users, especially if they own files or ser
 ## Running_Linux_on_Docker 
 Here are the general steps to run Linux on Docker:
 
-### Prerequisites:
-
-1. **Install Docker:**
-   - Ensure that Docker is installed on your system. You can download and install Docker from the official website: [Docker](https://www.docker.com/get-started).
 
 ### Steps to Run Linux on Docker:
 
@@ -299,6 +296,65 @@ Here are the general steps to run Linux on Docker:
 
    - Replace `my_linux_container` with the actual name or ID of your container.
 
+
+### Start a stopped Docker container,
+you can use the `docker start` command followed by the container name or ID. Here's the general syntax:
+
+```bash
+docker start container_name_or_id
+```
+
+Replace `container_name_or_id` with the actual name or ID of your Docker container. For example, if your container is named "my_ubuntu_container," you would run:
+
+```bash
+docker start my_ubuntu_container
+```
+
+After starting the container, you can use the `docker ps` command to check if it's running:
+
+```bash
+docker ps
+```
+
+If you want to start a stopped container and attach to it interactively, you can use the `docker start` command followed by the `-a` and `-i` options:
+
+```bash
+docker start -ai container_name_or_id
+```
+
+This will start the container and attach to its console interactively.
+
+Remember that stopping a container does not remove it; it only stops it from running. If you want to remove a stopped container, you can use the `docker rm` command:
+
+```bash
+docker rm container_name_or_id
+```
+
+Replace `container_name_or_id` with the actual name or ID of the stopped container.
+
+These commands allow you to manage the lifecycle of your Docker containers, starting and stopping them as needed.
+
+### Enter the shell of a running Docker container
+you can use the `docker exec` command. Here's the general syntax:
+
+```bash
+docker exec -it container_name_or_id /bin/bash
+```
+
+Replace `container_name_or_id` with the actual name or ID of your running Docker container. For example, if your container is named "my_ubuntu_container," you would run:
+
+```bash
+docker exec -it my_ubuntu_container /bin/bash
+```
+
+This command uses the `-it` options to run interactively and allocate a pseudo-TTY, and `/bin/bash` specifies that you want to run a bash shell.
+
+If you're using a different shell in your container, replace `/bin/bash` with the appropriate shell path.
+
+Once you run this command, you'll be inside the shell of the running container, and you can interact with it as if you were working on a regular Linux system. To exit the container's shell, type `exit`.
+
+Remember that this assumes your Docker container has a shell installed. If your container is based on a minimal image or doesn't have a shell, you might need to use a different command or customize your Docker image accordingly.
+
 ### Example - Running Ubuntu:
 
 Here is a more specific example using Ubuntu:
@@ -329,6 +385,8 @@ Here is a more specific example using Ubuntu:
    docker stop my_ubuntu_container
    docker rm my_ubuntu_container
    docker exec -it my_ubuntu_container su -
+   docker exec -it my_ubuntu_container /bin/bash
+   docker start my_ubuntu_container
    ```
 
    - Replace `my_ubuntu_container` with the actual name or ID of your container.
