@@ -549,3 +549,96 @@ Certainly! Here are some additional Java interview questions that are often aske
     - Interfaces provide a way to achieve abstraction and define a contract for classes to implement.
 
 These questions cover a broad range of topics, ensuring that freshers have a basic understanding of Java fundamentals, OOP principles, control flow, and commonly used data structures. Preparation for these questions can help candidates demonstrate their knowledge and problem-solving skills during interviews.
+
+---
+
+Certainly! Let's continue with more Java interview questions for freshers:
+
+### Java Methods:
+
+36. **What is the difference between a method parameter and an argument?**
+    - A method parameter is a variable declared in a method signature.
+    - An argument is the actual value passed to a method when it is called.
+
+37. **Explain the concept of method overloading with an example.**
+    - Method overloading involves defining multiple methods with the same name but different parameter lists.
+    - Example:
+      ```java
+      class Calculator {
+          int add(int a, int b) {
+              return a + b;
+          }
+
+          double add(double a, double b) {
+              return a + b;
+          }
+      }
+      ```
+
+### Java Keywords:
+
+38. **What is the `final` keyword used for in method parameters?**
+    - The `final` keyword before a method parameter indicates that the parameter's value cannot be changed within the method.
+
+39. **Explain the `static` keyword in Java with respect to variables and methods.**
+    - `static` variables belong to the class rather than instances and are shared among all objects of the class.
+    - `static` methods belong to the class and can be called using the class name without creating an instance.
+
+### Java Memory Management:
+
+40. **What is the difference between stack and heap memory in Java?**
+    - Stack memory is used for storing method call information, local variables, and references.
+    - Heap memory is used for dynamic memory allocation, where objects are stored.
+
+41. **How does Java handle memory leaks, and what is garbage collection?**
+    - Java uses automatic garbage collection to reclaim memory occupied by objects that are no longer reachable.
+    - Memory leaks are prevented by the garbage collector, which identifies and removes unreferenced objects.
+
+### Java File I/O:
+
+42. **Explain the difference between `FileReader` and `BufferedReader` in Java.**
+    - `FileReader` is used to read the contents of a file as characters.
+    - `BufferedReader` is used to read text from a character-based input stream with efficiency.
+
+43. **How does exception handling play a role in file I/O operations?**
+    - File I/O operations can throw exceptions (e.g., `IOException`).
+    - Proper exception handling (using `try-catch` blocks) is necessary to handle potential errors during file operations.
+
+### Java Design Patterns:
+
+44. **What is the Singleton design pattern, and why is it useful?**
+    - The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.
+    - It is useful when exactly one object is needed to coordinate actions across a system.
+
+45. **Explain the Observer design pattern with an example.**
+    - The Observer pattern defines a one-to-many dependency between objects.
+    - Example: Implementing an event listener where multiple objects (observers) are notified of changes in a subject.
+
+### Java 8 Features:
+
+46. **What are Lambda expressions, and how are they used in Java?**
+    - Lambda expressions provide a concise way to express instances of single-method interfaces (functional interfaces).
+    - They simplify the syntax of anonymous inner classes.
+    - Example: `(a, b) -> a + b`
+
+47. **What is the Stream API in Java 8, and how does it differ from Collections?**
+    - The Stream API provides a sequence of elements that can be processed in parallel or sequentially.
+    - Unlike Collections, streams do not store elements; they are processed on-demand.
+
+### Java Frameworks:
+
+48. **What is the Spring Framework, and why is it widely used in Java development?**
+    - The Spring Framework is a comprehensive framework for Java development, providing features like dependency injection, aspect-oriented programming, and more.
+    - It simplifies the development of Java applications and promotes good design practices.
+
+49. **Explain the MVC (Model-View-Controller) architecture in the context of web development.**
+    - MVC separates an application into three components: Model (data and business logic), View (presentation layer), and Controller (handles user input and updates the model/view).
+
+### Web Development in Java:
+
+50. **What is Servlet in Java, and how is it used in web development?**
+    - A Servlet is a Java program that runs on the server, handling HTTP requests and generating responses.
+    - Servlets are commonly used in Java web applications for server-side processing.
+
+These additional questions cover various aspects of Java programming, including methods, keywords, memory management, file I/O, design patterns, Java 8 features, and popular Java frameworks. It's important for freshers to have a well-rounded understanding of these topics to perform well in interviews and succeed in Java development roles.
+
