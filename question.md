@@ -1,4 +1,4 @@
-> Problem Statement:
+>## Problem Statement:
 
 You are given a string of lowercase English alphabets. Your task is to find whether two exactly same strings can be formed using all the characters given in the input string, if not possible then print 'Not Possibl'
 If possible then you have to display the new generated string in which all the characters are lexicographically sorted.
@@ -99,7 +99,7 @@ int main()
 
 
 
-> Problem Statement
+>##  Problem Statement
 
 Alice owns a Cola stand, where each cola costs $5.
 Customers are standing in a queue to buy from Alice, and order one at a time (in the order specified by invoice).
@@ -198,7 +198,7 @@ int N = invoice.size();
 
 ---------------------------------
 
-> Problem Statement
+>##  Problem Statement
 
 You are given a array of plot prices arr[] and a amount N, you have to find the minimum number of consecutive plots you can buy in that amount and print their positions in the array. The amount has to be fully exhausted/spent, If you are unable to spend the amount return array of positions [-1]
 Examples:
@@ -296,7 +296,7 @@ int main()
 
 ---------------------------------------------
 
-> Problem Statement
+>##  Problem Statement
 
 You are given a bag full of Legos (Toy plastic blocks that can join with another block to form a big plastic toy Building). The bag contains N legos of 2 different colors(Red and Yellow), all of the different heights. You have to select M legos from the bag such that it follows two conditions-
 1. No two consecutive lego are of the same color
@@ -393,5 +393,91 @@ int main()
     cout << maxBuildingHeight(red_legos, yellow_legos) << endl;
 
     return 0;
+}
+```
+-----------
+
+>## Problem Statement:
+
+Customise Zig-zag Traversal
+
+You are given a graph (which is in the form of a complete binary tree). You have to traverse the tree level-wise and print the first value that is present in each level, alternatively from left (if it is an even level) and then right (if it is an odd level), and so on.
+
+Suppose the tree is like this:
+
+![](./tree.png)
+
+The customized zig-zag traversal will be [1, 2, 9]. (Take it as 1-based leveling.)
+
+Note: The input will be in the sequence of level-order traversals of the complete binary tree.
+
+#### Input Format
+- First-line will contain an integer h, denoting the height of the tree
+- Next-line will contain an integer n, denoting the maximum number of nodes that can be present in the complete binary tree of the given height.
+- The next n lines will contain an integer each.
+
+#### Constraints
+- 1<=h<=20
+- n=2^h - 1
+- node value = (-1, integer> -1 and inveger < 101)
+
+#### Output Format
+- Return an integer array denoting the custom order traversal.
+
+#### Evaluation Parameters
+
+#### Sample Input
+```
+3
+7
+1
+2
+5
+3
+4
+4
+9
+```
+
+#### sample output:
+
+```
+1
+2
+9
+```
+
+
+#### code:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> customZigZag(int h, vector<int> node)
+{
+    vector<int> result;
+    int sum = 0;
+    for (int i = 0; i < h; i++)
+    {
+        if (i % 2 == 0)
+        {
+            sum = pow(2, i + 1) - 2;
+            result.push_back(node[sum]);
+        }
+        else
+        {
+            sum = pow(2, i) - 1;
+            result.push_back(node[sum]);
+        }
+    }
+
+    return result;
+}
+
+int main()
+{
+    vector<int> result;
+    result = customZigZag(3, {1, 2, 5, 3, 4});
 }
 ```

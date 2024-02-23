@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git status
 git add .
 echo Enter your comment: 
 read comment 
